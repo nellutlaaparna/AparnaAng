@@ -1,0 +1,33 @@
+<div class="si">
+<form class="needs-validation" novalidate>
+    <div class="form-group">
+     <input class="formcontrol" type="text" name="" id="" placeholder="Enter a username">
+     <span class="invalid-feedback">Please enter the username</span>
+     </div>
+     <div class="form-group">
+     <input class="formcontrol" type="password" name="" id="" placeholder="Enter a Password" pattern="(?
+    =.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8}" required>
+     <small class="invalid-feedback">Please enter the password</small>
+     </div>
+     <div class="form-group">
+     <input class="formcontrol" type="text" name="" id="" placeholder="Enter a Phone number" pattern="[\
+    d]{10}" required>
+     <small class="invalid-feedback">Please enter the phone number</small>
+     </div>
+     <div>
+     <input type="submit" value="Login">
+     </div>
+     </form>
+    <script>
+     var v1=document.querySelector('.needs-validation');
+     v1.addEventListener('submit',function(e){
+    
+     if(v1.checkValidity()===false){
+     e.preventDefault();
+     e.stopPropagation();
+     }
+     v1.classList.add('was-validated');
+     })
+    
+</script>
+</div>
